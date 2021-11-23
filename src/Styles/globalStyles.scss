@@ -1,3 +1,6 @@
+$bgColor: #F0E7DB;
+$cardColor: #F5F0E8;
+
 * {
   margin: 0;
   padding: 0;
@@ -5,5 +8,16 @@
   font-family: 'Poppins', sans-serif;
 }
 
-$bgColor: #F0E7DB;
-$cardColor: #F5F0E8;
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $bgColor;
+  margin: 0 auto;
+
+  main {
+    width: 51rem;
+    margin-top: 20px;
+  }
+}
