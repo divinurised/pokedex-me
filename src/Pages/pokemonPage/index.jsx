@@ -4,6 +4,9 @@ import axios from 'axios';
 
 import Loader from '../../components/loader';
 import Navbar from '../../components/navbar';
+import PokemonType from '../../components/PokemonType';
+
+import './styles.scss'
 
 const PokemonPage = () => {
   const { id } = useParams();
@@ -36,9 +39,43 @@ const PokemonPage = () => {
       ) : (
         <>
           <Navbar />
-          <h1>{pokemonDetails.name}</h1>
+          <div className="pokemonContainer">
+            <h1>{pokemonDetails.name.charAt(0).toUpperCase() + pokemonDetails.name.slice(1)}</h1>
+            {/* <p className={pokemonDetails.types[0].type.name}>{pokemonDetails.types[0].type.name}</p> */}
+            <PokemonType pokemon={pokemonDetails} />
+            <img src={pokemonDetails.sprites.front_default} alt="Pokemon Sprite" />
+
+            <div className="infoContainer">
+
+              {pokemonDetails.stats.map((stats) => (
+                <div className="titleContainer">
+                  <div className="statContainer">
+                    <div key={pokemonDetails.name} className="titleContent">{stats.stat.name}</div>
+                    <div key={pokemonDetails.name} className="titleContent">{stats.base_stat}</div>
+                  </div>
+
+                  <div className="statBarContainer">
+                    <div className="statBar">
+                      <span className={pokemonDetails.types[0].type.name} style={{
+                        width: stats.base_stat + '%',
+                        display: 'block',
+                        height: '100%',
+                        borderRadius: '3px',
+                      }
+                      }>
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+              ))}
+
+            </div>
+
+          </div>
         </>
-      )}
+      )
+      }
     </>
   );
 }

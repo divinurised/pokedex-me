@@ -1,0 +1,73 @@
+@import '../../styles/globalStyles.scss';
+@import '../../styles/types.scss';
+
+.pokemonContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  > h1 {
+    margin: 55px 0px 20px 0px;
+  }
+
+  img {
+    width: 20%;
+  }
+
+  .infoContainer {
+    width: 60%;
+    height: inherit;
+    border-radius: 5px;
+    background-color: $cardColor;
+    margin-bottom: 70px;
+
+    .titleContainer {
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      font-weight: 600;
+
+      .statContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+      }
+
+      .titleContent {
+        margin: 10px;
+      }
+
+      .statBarContainer {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .statBar {
+          width: 90%;
+          max-width: 260px;
+          height: 6px;
+          background: rgba($color: #000000, $alpha: 0.06);
+          border-radius: 3px;
+          overflow: hidden;
+
+          span {
+            transform: scaleX(.001);
+            transform-origin: left;
+            animation: scaleBar 1.5s ease-in-out 1 forwards;
+          }
+
+          @keyframes scaleBar {
+            0% {
+              transform: scaleX(0.001);
+            }
+            100% {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
