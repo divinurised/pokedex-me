@@ -7,6 +7,15 @@
   justify-content: space-between;
   max-width: 60vw;
 
+  .logoContainer {
+    display: flex;
+    align-items: center;
+
+    :first-child {
+      margin-right: 5px;
+    }
+  }
+
   .navigation {
     display: flex;
 

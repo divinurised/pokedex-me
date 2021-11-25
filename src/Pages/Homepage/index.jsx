@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import Navbar from '../../components/navbar';
+import Footer from '../../components/Footer';
 import Loader from '../../components/loader';
 import { CardPokemons } from '../../components/cardPokemons/index';
 
@@ -11,6 +12,7 @@ const Homepage = () => {
 
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(true)
+  const [query, setQuery] = useState("");
 
   const getPokemonList = async () => {
     let pokemonArray = [];
@@ -39,15 +41,22 @@ const Homepage = () => {
         <Loader />
       ) : (
         <>
-          <Navbar />
+          <Navbar getQuery={(q) => setQuery(q)} />
           <div className="cardContainer">
-            {pokemon.map(pokemon => (
+            {pokemon.filter((pokemon) => {
+              if (query == '') {
+                return pokemon;
+              } else if (pokemon.data.name.toLowerCase().includes(query.toLowerCase())) {
+                return pokemon;
+              }
+            }).map(pokemon => (
               <CardPokemons
                 key={pokemon.data.name}
                 pokemon={pokemon}
               />
             ))}
           </div>
+          <Footer />
         </>
       )}
     </>

@@ -5,6 +5,7 @@ import axios from 'axios';
 import Loader from '../../components/loader';
 import Navbar from '../../components/navbar';
 import PokemonType from '../../components/PokemonType';
+import Map from '../../components/Map'
 
 import './styles.scss'
 
@@ -40,19 +41,18 @@ const PokemonPage = () => {
         <>
           <Navbar />
           <div className="pokemonContainer">
+
             <h1>{pokemonDetails.name.charAt(0).toUpperCase() + pokemonDetails.name.slice(1)}</h1>
             <PokemonType pokemon={pokemonDetails} />
             <img src={pokemonDetails.sprites.front_default} alt="Pokemon Sprite" />
 
             <div className="infoContainer">
-
               {pokemonDetails.stats.map((stats) => (
                 <div className="titleContainer">
                   <div className="statContainer">
                     <div key={pokemonDetails.name} className="titleContent">{stats.stat.name}</div>
                     <div key={pokemonDetails.name} className="titleContent">{stats.base_stat}</div>
                   </div>
-
                   <div className="statBarContainer">
                     <div className="statBar">
                       <span className={pokemonDetails.types[0].type.name} style={{
@@ -65,12 +65,12 @@ const PokemonPage = () => {
                       </span>
                     </div>
                   </div>
-
                 </div>
               ))}
-
             </div>
 
+            <h2>Find it near you!</h2>
+            <Map pokemon={pokemonDetails} />
           </div>
         </>
       )

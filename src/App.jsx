@@ -3,6 +3,8 @@ import Homepage from './pages/homepage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PokemonPage from './pages/pokemonPage';
 
+import Footer from './components/Footer';
+
 import './styles/globalStyles.scss'
 
 function App() {
