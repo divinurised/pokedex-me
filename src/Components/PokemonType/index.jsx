@@ -5,7 +5,9 @@ import './styles.scss';
 function PokemonType({ pokemon }) {
   return (
     <div className="typeContainer">
-      <p className={pokemon.types[0].type.name}>{pokemon.types[0].type.name.charAt(0).toUpperCase() + pokemon.types[0].type.name.slice(1)}</p>
+      {pokemon.types.map((types) => (
+        <p key={types.type.name} className={types.type.name}>{types.type.name.charAt(0).toUpperCase() + types.type.name.slice(1)}</p>
+      ))}
     </div>
   );
 }

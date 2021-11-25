@@ -41,7 +41,6 @@ const PokemonPage = () => {
           <Navbar />
           <div className="pokemonContainer">
             <h1>{pokemonDetails.name.charAt(0).toUpperCase() + pokemonDetails.name.slice(1)}</h1>
-            {/* <p className={pokemonDetails.types[0].type.name}>{pokemonDetails.types[0].type.name}</p> */}
             <PokemonType pokemon={pokemonDetails} />
             <img src={pokemonDetails.sprites.front_default} alt="Pokemon Sprite" />
 

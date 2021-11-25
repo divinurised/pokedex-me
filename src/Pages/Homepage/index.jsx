@@ -31,6 +31,8 @@ const Homepage = () => {
     getPokemonList();
   }, [])
 
+  console.log(pokemon)
+
   return (
     <>
       {loading ? (
