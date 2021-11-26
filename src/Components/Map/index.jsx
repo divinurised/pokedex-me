@@ -5,9 +5,9 @@ import Loader from '../../components/loader';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet'
 
-function Map({ pokemonDetails }) {
+function Map({ pokemon }) {
 
-  console.log(pokemonDetails)
+  console.log(pokemon)
 
   const [loading, setLoading] = useState(true)
 
@@ -69,10 +69,10 @@ function Map({ pokemonDetails }) {
             position={[current.latitude + Math.random() * (0.000 - 0.001) + 0.001, current.longitude + Math.random() * (0.000 - 0.001) + 0.001]}
             icon={pokemonMarker}>
             <Popup>
-              {/* <img
-              style={{ width: '100px', height: '100px' }}
-              src={pokemonDetails.sprites.front_default}
-              alt="Wild Pokemon Appears" /> */}
+              <img
+                style={{ width: '100px', height: '100px' }}
+                src={pokemon.sprites.front_default}
+                alt="Wild Pokemon Appears" />
             </Popup>
           </Marker>
 

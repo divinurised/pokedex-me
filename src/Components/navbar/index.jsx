@@ -15,6 +15,12 @@ function Navbar({ getQuery }) {
   };
 
   console.log(text)
+  console.log(window.location.pathname)
+
+  // const searchPokemon = () => {
+  //   window.location.replace(`/pokemon/${text.toLocaleLowerCase()}`)
+  //   console.log(text)
+  // }
 
   return (
     <section className="navbar">
@@ -25,22 +31,22 @@ function Navbar({ getQuery }) {
         </Link>
         <p>Find your favorite Pokemon near you!</p>
         <div className="searchContainer">
-          <GoSearch />
-
-          <input
-            type="text"
-            name=""
-            id=""
-            placeholder="Search your Pokemon"
-            onChange={(e) => onChange(e.target.value)}
-            value={text}
-          />
+          <form action={`/pokemon/${text.toLocaleLowerCase()}`}>
+            <GoSearch />
+            <input
+              type="text"
+              placeholder="Search your Pokemon"
+              onChange={(e) => onChange(e.target.value)}
+              value={text}
+            />
+            <input type="submit" value="" />
+          </form>
 
         </div>
       </div>
       <div className="navigation">
-        <p>About</p>
-        <p><GoMarkGithub className="githubIcon" />  Source</p>
+        <Link to="/about">About</Link>
+        <Link to="#"><GoMarkGithub className="githubIcon" />  Source</Link>
       </div>
     </section>
   );

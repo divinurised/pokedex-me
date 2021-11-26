@@ -6,6 +6,7 @@ import Loader from '../../components/loader';
 import Navbar from '../../components/navbar';
 import PokemonType from '../../components/PokemonType';
 import Map from '../../components/Map'
+import Footer from '../../components/Footer'
 
 import './styles.scss'
 
@@ -14,6 +15,7 @@ const PokemonPage = () => {
 
   const [pokemonDetails, setPokemonDetails] = useState();
   const [loading, setLoading] = useState(true);
+  const [query, setQuery] = useState("");
 
   const getPokemon = async (id) => {
     const details = await getPokemonData(id);
@@ -39,7 +41,7 @@ const PokemonPage = () => {
         <Loader />
       ) : (
         <>
-          <Navbar />
+          <Navbar getQuery={(q) => setQuery(q)} />
           <div className="pokemonContainer">
 
             <h1>{pokemonDetails.name.charAt(0).toUpperCase() + pokemonDetails.name.slice(1)}</h1>
@@ -72,6 +74,7 @@ const PokemonPage = () => {
             <h2>Find it near you!</h2>
             <Map pokemon={pokemonDetails} />
           </div>
+          <Footer />
         </>
       )
       }

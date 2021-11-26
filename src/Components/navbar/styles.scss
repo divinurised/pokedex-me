@@ -18,23 +18,25 @@
 
   .navigation {
     display: flex;
+    
+    a {
+      text-decoration: none;
+      color: black;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        box-shadow: 0px 2px black;
+      }
+    }
 
     :first-child {
       margin-right: 20px;
     }
-
-    p {
-      height: fit-content;
-      display: flex;
-      align-items: center;
-    }
     
     .githubIcon {
       margin-right: 5px;
-    }
-
-    p:hover {
-      box-shadow: 0px 2px black;
     }
   }
 
@@ -53,15 +55,20 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding: 5px 10px;
+      padding: 10px 10px;
       margin-top: 10px;
       border-radius: 5px;
+
+      form {
+        display: flex;
+        align-items: center;
+      }
 
       input { 
         border-style: none;
         outline: none;
         background-color: transparent;
-        margin-left: 10px;
+        margin-left: 15px;
       }
     }
   }

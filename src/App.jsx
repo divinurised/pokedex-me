@@ -1,9 +1,9 @@
 import React from 'react';
-import Homepage from './pages/homepage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import PokemonPage from './pages/pokemonPage';
 
-import Footer from './components/Footer';
+import Homepage from './pages/homepage';
+import PokemonPage from './pages/pokemonPage';
+import About from './pages/About'
 
 import './styles/globalStyles.scss'
 
@@ -15,6 +15,7 @@ function App() {
           <Routes>
             <Route exact path='/' element={<Homepage />} />
             <Route path='/pokemon/:id' element={<PokemonPage />} />
+            <Route exact path='/about' element={<About />} />
           </Routes>
         </Router>
       </main>

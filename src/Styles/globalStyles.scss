@@ -19,9 +19,14 @@ body {
   flex-direction: column;
   background-color: $bgColor;
   margin: 0 auto;
+  min-height: 100vh;
 
   main {
     width: 50rem;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
   }
 }

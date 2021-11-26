@@ -11,7 +11,12 @@ function Footer() {
       <Link to="#" className="aboutContainer">
         <p>Learn more about this project here.</p>
       </Link>
-      <p>Made with <img src={Hope} alt="Hope!" title="Hope!" />by <Link className="me" to="#">Davi Alcântara</Link></p>
+      <div className="signature">
+        <p>Made with</p>
+        <img src={Hope} alt="Hope!" title="Hope!" />
+        <p>by</p>
+        <Link className="me" to="#">Davi Alcântara</Link>
+      </div>
     </section>
   );
 }
