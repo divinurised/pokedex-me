@@ -1,6 +1,79 @@
+@import '../../styles//globalStyles.scss';
+
 .cardContainer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex: 1;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex: 1;
+	height: 100%;
+
+	.pokemonLoader {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.loader {
+			margin: 0 auto;
+		}
+	}
+}
+
+.paginationContainer {
+	margin-top: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.pagination {
+		margin: 0;
+		display: inline-flex;
+		vertical-align: middle;
+		border: 1px solid rgba(34, 36, 38, 0.15);
+		box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+		border-radius: 0.28571429rem;
+		min-height: 2.85714286em;
+		background-color: $cardColor;
+		width: fit-content;
+		.item {
+			font-weight: 600;
+			min-width: 3em;
+			text-align: center;
+			position: relative;
+			vertical-align: middle;
+			line-height: 1;
+			text-decoration: none;
+			-webkit-tap-highlight-color: transparent;
+			flex: 0 0 auto;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			background: 0 0;
+			padding: 0.92857143em 1.14285714em;
+			text-transform: none;
+			color: rgba(0, 0, 0, 0.87);
+			font-weight: 400;
+			transition-property: background, box-shadow, color;
+			transition-duration: 0.1s, 0.1s, 0.1s;
+			transition-timing-function: ease, ease, ease;
+			transition-delay: 0s, 0s, 0s;
+			transition: 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
+			cursor: pointer;
+			&:hover {
+				background-color: darken($cardColor, 20%);
+			}
+			:first-child {
+				border-radius: 0.28571429rem 0 0 0.28571429rem;
+			}
+			:last-child {
+				border-radius: 0 0.28571429rem 0.28571429rem 0;
+				:not(.vertical) .item {
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
+		.active {
+			background-color: darken($cardColor, 10%);
+		}
+	}
 }

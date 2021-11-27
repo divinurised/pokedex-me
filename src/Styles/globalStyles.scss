@@ -1,32 +1,32 @@
-$bgColor: #F0E7DB;
-$cardColor: #F5F0E8;
+$bgColor: #f0e7db;
+$cardColor: #f5f0e8;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
 
 body {
-  min-height: 100vh;
+	min-height: 100vh;
 }
 
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: $bgColor;
-  margin: 0 auto;
-  min-height: 100vh;
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: $bgColor;
+	margin: 0 auto;
+	min-height: 100vh;
 
-  main {
-    width: 50rem;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-  }
+	main {
+		width: 50rem;
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex: 1;
+	}
 }
