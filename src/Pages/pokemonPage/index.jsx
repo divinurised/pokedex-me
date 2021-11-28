@@ -8,6 +8,7 @@ import PokemonType from '../../components/PokemonType';
 import Map from '../../components/Map';
 import Footer from '../../components/Footer';
 
+import { ScaleLoader } from 'react-spinners';
 import './styles.scss';
 
 const PokemonPage = () => {
@@ -35,6 +36,11 @@ const PokemonPage = () => {
 
 	console.log(pokemonDetails);
 
+	const playPokemonCry = () => {
+		document.getElementById('cry').play();
+		console.log('TA INDOOO');
+	};
+
 	return (
 		<>
 			{loading ? (
@@ -52,6 +58,20 @@ const PokemonPage = () => {
 							src={pokemonDetails.sprites.front_default}
 							alt="Pokemon Sprite"
 						/>
+						<div
+							type="checkbox"
+							className="pokemonCry"
+							onClick={playPokemonCry}
+						>
+							<ScaleLoader />
+
+							<video id="cry" style={{ display: 'none' }} name="media">
+								<source
+									src={`https://play.pokemonshowdown.com/audio/cries/${pokemonDetails.name}.ogg`}
+									type="audio/ogg"
+								/>
+							</video>
+						</div>
 
 						<div className="infoContainer">
 							{pokemonDetails.stats.map((stats) => (

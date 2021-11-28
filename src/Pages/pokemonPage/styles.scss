@@ -7,6 +7,16 @@
 	flex-direction: column;
 	align-items: center;
 
+	.pokemonCry {
+		cursor: pointer;
+		margin: 0 0 30px;
+
+		// .cryAnimate {
+		// 	animation: animation-6rlus4 1s 0.1s infinite
+		// 		cubic-bezier(0.2, 0.68, 0.18, 1.08);
+		// }
+	}
+
 	> h1 {
 		margin: 55px 0px 20px 0px;
 	}

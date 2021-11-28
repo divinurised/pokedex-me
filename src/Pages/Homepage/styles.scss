@@ -2,10 +2,14 @@
 
 .cardContainer {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	flex: 1;
 	height: 100%;
+	margin-top: 1.5rem;
+	a:not(:last-child) {
+		margin-right: 1.5rem;
+	}
 
 	.pokemonLoader {
 		width: 100%;

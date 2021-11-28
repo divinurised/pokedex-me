@@ -37,14 +37,14 @@ const Homepage = function () {
 
 	const getCurrentPage = (e, pageInfo) => {
 		setPageCount(pageInfo.activePage);
-		setCurrentPage(pageInfo.activePage * 20 - 20);
+		setCurrentPage(pageInfo.activePage * 21 - 21);
 	};
 
 	const getPokemonList = async () => {
 		setLoadingPokemons(true);
 		setPokemon([]);
 		const pokemonArray = [];
-		for (let i = 1; i <= 20; i++) {
+		for (let i = 1; i <= 21; i++) {
 			pokemonArray.push(await getPokemonData(i + currentPage));
 		}
 		console.log(pokemonArray);

@@ -19,7 +19,8 @@ function Map({ pokemon }) {
 	});
 
 	const userMarker = new L.icon({
-		iconUrl: 'http://assets.stickpng.com/images/5888920ebc2fc2ef3a1860a9.png',
+		iconUrl:
+			'https://www.pinclipart.com/picdir/big/17-171343_maps-clipart-map-pin-google-maps-marker-blue.png',
 		iconSize: [25, 41],
 		iconAnchor: [10, 41],
 		popupAnchor: [2, -40],
@@ -74,8 +75,8 @@ function Map({ pokemon }) {
 
 					<Marker
 						position={[
-							current.latitude + Math.random() * (0.0 - 0.001) + 0.001,
-							current.longitude + Math.random() * (0.0 - 0.001) + 0.001,
+							current.latitude + Math.random() * (-0.001 - 0.001) + 0.001,
+							current.longitude + Math.random() * (-0.001 - 0.001) + 0.001,
 						]}
 						icon={pokemonMarker}
 					>
