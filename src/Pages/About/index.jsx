@@ -2,15 +2,11 @@ import React, { useState } from 'react';
 
 import { MdCatchingPokemon } from 'react-icons/md';
 
-import Navbar from '../../components/navbar';
-import Footer from '../../components/Footer';
-
 function About() {
 	const [query, setQuery] = useState('');
 
 	return (
 		<>
-			<Navbar getQuery={(q) => setQuery(q)} />
 			<MdCatchingPokemon size={30} />
 			<h2>Pokedex.me</h2>
 			<h1>A react app based in the public PokeAPI</h1>
@@ -42,7 +38,6 @@ function About() {
 					</span>
 				</li>
 			</ul>
-			<Footer />
 		</>
 	);
 }

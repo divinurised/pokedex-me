@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import axios from 'axios';
 
-import Loader from '../../components/loader';
-import Navbar from '../../components/navbar';
+import Loader from '../../components/Loader';
 import PokemonType from '../../components/PokemonType';
 import Map from '../../components/Map';
-import Footer from '../../components/Footer';
 
 import { ScaleLoader } from 'react-spinners';
+import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 import './styles.scss';
+import { Link } from 'react-router-dom';
 
 const PokemonPage = () => {
 	const { id } = useParams();
@@ -47,42 +47,46 @@ const PokemonPage = () => {
 				<Loader />
 			) : (
 				<>
-					<Navbar getQuery={(q) => setQuery(q)} />
 					<div className="pokemonContainer">
 						<h1>
 							{pokemonDetails.name.charAt(0).toUpperCase() +
 								pokemonDetails.name.slice(1)}
 						</h1>
 						<PokemonType pokemon={pokemonDetails} />
-						<img
-							src={pokemonDetails.sprites.front_default}
-							alt="Pokemon Sprite"
-						/>
+						<div className="next-previous-container">
+							<a href={`/pokemon/${parseInt(id) - 1}`}>
+								<GoChevronLeft size={40} />
+							</a>
+							<img
+								src={pokemonDetails.sprites.front_default}
+								alt="Pokemon Sprite"
+							/>
+							<a href={`/pokemon/${parseInt(id) + 1}`}>
+								<GoChevronRight size={40} />
+							</a>
+						</div>
 						<div
 							type="checkbox"
 							className="pokemonCry"
 							onClick={playPokemonCry}
 						>
 							<ScaleLoader />
-
 							<video id="cry" style={{ display: 'none' }} name="media">
 								<source
-									src={`https://play.pokemonshowdown.com/audio/cries/${pokemonDetails.name}.ogg`}
-									type="audio/ogg"
+									// src={`https://play.pokemonshowdown.com/audio/cries/${pokemonDetails.name}.ogg`}
+									src={`https://play.pokemonshowdown.com/audio/cries/${pokemonDetails.name}.mp3`}
+									// type="audio/ogg"
+									type="audio/mp3"
 								/>
 							</video>
 						</div>
 
 						<div className="infoContainer">
 							{pokemonDetails.stats.map((stats) => (
-								<div className="titleContainer">
+								<div key={pokemonDetails.id} className="titleContainer">
 									<div className="statContainer">
-										<div key={pokemonDetails.name} className="titleContent">
-											{stats.stat.name}
-										</div>
-										<div key={pokemonDetails.name} className="titleContent">
-											{stats.base_stat}
-										</div>
+										<div className="titleContent">{stats.stat.name}</div>
+										<div className="titleContent">{stats.base_stat}</div>
 									</div>
 									<div className="statBarContainer">
 										<div className="statBar">
@@ -104,7 +108,6 @@ const PokemonPage = () => {
 						<h2>Find it near you!</h2>
 						<Map pokemon={pokemonDetails} />
 					</div>
-					<Footer />
 				</>
 			)}
 		</>
@@ -112,3 +115,5 @@ const PokemonPage = () => {
 };
 
 export default PokemonPage;
+
+// getQuery={(q) => setQuery(q)}

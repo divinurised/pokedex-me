@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import Navbar from '../../components/navbar';
+import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import Loader from '../../components/loader';
+import Loader from '../../components/Loader';
 import { Pagination } from 'semantic-ui-react';
-import { CardPokemons } from '../../components/cardPokemons/index';
+import { CardPokemons } from '../../components/CardPokemons/index';
 
 import './styles.scss';
 
@@ -14,31 +14,45 @@ const Homepage = function () {
 	const [loading, setLoading] = useState(true);
 	const [query, setQuery] = useState('');
 
-	const [totalPokemons, setTotalPokemons] = useState([]);
-	const [pokemonsPerPage, setPokemonsPerPage] = useState(20);
-
-	const getTotalPokemons = async () => {
-		await axios.get('https://pokeapi.co/api/v2/pokemon').then((response) => {
-			setTotalPokemons(response.data.count);
-			console.log(totalPokemons);
-		});
-	};
-
-	useEffect(() => {
-		getTotalPokemons();
-	}, [totalPokemons]);
-
+	const [totalPokemons, setTotalPokemons] = useState(882);
+	const [allPokemons, setAllPokemons] = useState([]);
+	const [pokemonsPerPage, setPokemonsPerPage] = useState(21);
 	const totalPage = Math.ceil(totalPokemons / pokemonsPerPage);
 	const [currentPage, setCurrentPage] = useState(0);
-	const [previousPageUrl, setPreviousPageUrl] = useState();
-	const [offset, setOffSet] = useState(0);
 	const [pageCount, setPageCount] = useState();
 	const [loadingPokemons, setLoadingPokemons] = useState(true);
+
+	// const getAllPokemonsName = async () => {
+	// 	await axios
+	// 		.get('https://pokeapi.com/api/v2/pokemon?limit=882')
+	// 		.then((response) => {
+	// 			console.log(response.data.results);
+	// 		});
+	// };
+
+	// useEffect(() => {
+	// 	getAllPokemonsName();
+	// }, [pokemon, currentPage, loading]);
+
+	// Get Total Pokemons
+
+	// const getTotalPokemons = async () => {
+	// 	await axios.get('https://pokeapi.co/api/v2/pokemon').then((response) => {
+	// 		setTotalPokemons(response.data.count);
+	// 		console.log(totalPokemons);
+	// 		getAllPokemonsName();
+	// 	});
+	// };
+	// useEffect(() => {
+	// 	getTotalPokemons();
+	// }, [totalPokemons]);
 
 	const getCurrentPage = (e, pageInfo) => {
 		setPageCount(pageInfo.activePage);
 		setCurrentPage(pageInfo.activePage * 21 - 21);
 	};
+
+	// List Pokemons
 
 	const getPokemonList = async () => {
 		setLoadingPokemons(true);
@@ -62,22 +76,15 @@ const Homepage = function () {
 		getPokemonList();
 	}, [currentPage]);
 
+	// Render Pokemons
+
 	const renderPokemons = () => {
 		const pokemonList = [];
-		pokemon
-			.filter((pokemon) => {
-				if (query == '') {
-					return pokemon;
-				}
-				if (pokemon.data.name.toLowerCase().includes(query.toLowerCase())) {
-					return pokemon;
-				}
-			})
-			.map((pokemon) =>
-				pokemonList.push(
-					<CardPokemons key={pokemon.data.name} pokemon={pokemon} />
-				)
-			);
+		pokemon.map((pokemon) =>
+			pokemonList.push(
+				<CardPokemons key={pokemon.data.name} pokemon={pokemon} />
+			)
+		);
 		if (loadingPokemons) {
 			const pokemonList = [];
 			pokemonList.push(
@@ -90,7 +97,6 @@ const Homepage = function () {
 			return pokemonList;
 		}
 	};
-
 	useEffect(() => {
 		renderPokemons();
 	}, [pokemon, currentPage]);
@@ -101,7 +107,6 @@ const Homepage = function () {
 				<Loader />
 			) : (
 				<>
-					<Navbar getQuery={(q) => setQuery(q)} />
 					<div className="paginationContainer">
 						<Pagination
 							activePage={pageCount}
@@ -119,7 +124,6 @@ const Homepage = function () {
 							onPageChange={getCurrentPage}
 						/>
 					</div>
-					<Footer />
 				</>
 			)}
 		</>

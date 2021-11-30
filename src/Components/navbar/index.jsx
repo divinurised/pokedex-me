@@ -1,25 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { GoMarkGithub, GoSearch } from 'react-icons/go';
 import { MdCatchingPokemon } from 'react-icons/md';
 import './styles.scss';
 
-function Navbar({ getQuery }) {
+function Navbar({ pokemon, pokemonsName }) {
 	const [text, setText] = useState('');
+	const [nextURL, setNextURL] = [''];
 
-	const onChange = (q) => {
-		setText(q);
-		getQuery(q);
+	const [filteredPokemons, setFilteredPokemons] = useState([]);
+
+	const handleFilter = (event) => {
+		const searchWord = event.target.value;
+		const newFilter = pokemonsName.results.filter((value) => {
+			const search = value.name
+				.toLowerCase()
+				.includes(searchWord.toLowerCase());
+			return search;
+		});
+		searchWord == '' ? setFilteredPokemons([]) : setFilteredPokemons(newFilter);
 	};
-
-	// console.log(text);
-	// console.log(window.location.pathname);
-
-	// const searchPokemon = () => {
-	//   window.location.replace(`/pokemon/${text.toLocaleLowerCase()}`)
-	//   console.log(text)
-	// }
 
 	return (
 		<section className="navbar">
@@ -34,18 +35,30 @@ function Navbar({ getQuery }) {
 				</Link>
 				<p>Find your favorite Pokemon near you!</p>
 				<div className="searchContainer">
-					<form action={`/pokemon/${text.toLocaleLowerCase()}`}>
-						<GoSearch />
-						<input
-							type="text"
-							placeholder="Search your Pokemon"
-							onChange={(e) => onChange(e.target.value)}
-							value={text}
-						/>
-						<input type="submit" value="" />
-					</form>
+					<GoSearch />
+					<input
+						type="text"
+						onChange={handleFilter}
+						placeholder="Search your Pokemon"
+					/>
 				</div>
+				{filteredPokemons.length != 0 && (
+					<div className="search-results">
+						{filteredPokemons.map((pokemon) => {
+							return (
+								<a
+									key={pokemon.name}
+									className="name-link"
+									href={`/pokemon/${pokemon.name}`}
+								>
+									<p>{pokemon.name}</p>
+								</a>
+							);
+						})}
+					</div>
+				)}
 			</div>
+
 			<div className="navigation">
 				<Link to="/about">About</Link>
 				<Link to="#">

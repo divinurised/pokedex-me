@@ -2,13 +2,15 @@
 
 .cardContainer {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	flex-wrap: wrap;
 	flex: 1;
 	height: 100%;
 	margin-top: 1.5rem;
-	a:not(:last-child) {
-		margin-right: 1.5rem;
+	// width: 100%;
+
+	a:nth-child(odd) {
+		margin: 0 1.5rem;
 	}
 
 	.pokemonLoader {

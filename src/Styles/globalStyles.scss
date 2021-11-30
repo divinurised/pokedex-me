@@ -12,7 +12,8 @@ body {
 	min-height: 100vh;
 }
 
-.container {
+#root {
+	background-color: #f0e7db;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -22,11 +23,34 @@ body {
 	min-height: 100vh;
 
 	main {
-		width: 50rem;
-		margin-top: 20px;
+		width: 51rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		flex: 1;
 	}
+}
+
+@media (max-width: 850px) {
+	.container {
+		width: 100vw;
+	}
+	.navbar,
+	main,
+	.pokemonContainer {
+		width: 100% !important;
+		padding: 5px 20px;
+	}
+	.card {
+		width: 12rem;
+		h2 {
+			font-size: 1.3rem;
+		}
+		p {
+			font-size: 0.9rem;
+		}
+	}
+}
+
+@media (max-width: 712px) {
 }

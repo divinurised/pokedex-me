@@ -1,25 +1,30 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
-import Homepage from './pages/homepage';
-import PokemonPage from './pages/pokemonPage';
+import Homepage from './pages/Homepage';
+import PokemonPage from './pages/PokemonPage';
 import About from './pages/About';
+
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
+import pokemonsName from './pokemonsName.json';
 
 import './styles/globalStyles.scss';
 
 function App() {
 	return (
-		<div className="container">
+		<>
+			<Navbar pokemonsName={pokemonsName} />
 			<main>
-				<Router>
-					<Routes>
-						<Route exact path="/" element={<Homepage />} />
-						<Route path="/pokemon/:id" element={<PokemonPage />} />
-						<Route exact path="/about" element={<About />} />
-					</Routes>
-				</Router>
+				<Routes>
+					<Route exact path="/" element={<Homepage />}></Route>
+					<Route path="/pokemon/:id" element={<PokemonPage />}></Route>
+					<Route exact path="/about" element={<About />}></Route>
+				</Routes>
 			</main>
-		</div>
+			<Footer />
+		</>
 	);
 }
 

@@ -5,7 +5,8 @@
 	display: flex;
 	display: flex;
 	justify-content: space-between;
-	max-width: 60vw;
+	width: 51rem;
+	margin-top: 20px;
 
 	.logoContainer {
 		display: flex;
@@ -43,6 +44,36 @@
 	.title {
 		display: flex;
 		flex-direction: column;
+		position: relative;
+
+		.search-results {
+			width: 100%;
+			border-radius: 5px;
+			margin-top: 5px;
+			background-color: $cardColor;
+			max-height: 10rem;
+			overflow: hidden;
+			overflow-y: auto;
+			position: absolute;
+			top: 100%;
+			z-index: 1;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			.name-link {
+				text-decoration: none;
+				color: black;
+				padding: 0.5rem 1rem;
+				display: block;
+				transition: hover 0.2s;
+
+				&:hover {
+					background-color: darken($cardColor, 5%);
+				}
+			}
+		}
 
 		// p {
 		//   background-color: $cardColor;
@@ -58,21 +89,18 @@
 			margin-top: 10px;
 			border-radius: 5px;
 
-			form {
+			:nth-child(2) {
+				width: 100%;
+			}
+
+			input {
 				display: flex;
 				width: 100%;
 				align-items: center;
-
-				:nth-child(2) {
-					width: 100%;
-				}
-
-				input {
-					border-style: none;
-					outline: none;
-					background-color: transparent;
-					margin-left: 15px;
-				}
+				border-style: none;
+				outline: none;
+				background-color: transparent;
+				margin-left: 15px;
 			}
 		}
 	}
