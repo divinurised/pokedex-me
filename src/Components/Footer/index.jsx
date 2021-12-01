@@ -8,14 +8,14 @@ import Hope from '../../assets/images/hope.png';
 function Footer() {
 	return (
 		<section className="footer">
-			<Link to="#" className="aboutContainer">
+			{/* <Link to="/about#headline" className="aboutContainer">
 				<p>Learn more about this project here.</p>
-			</Link>
+			</Link> */}
 			<div className="signature">
 				<p>Made with</p>
 				<img src={Hope} alt="Hope!" title="Hope!" />
 				<p>by</p>
-				<Link className="me" to="#">
+				<Link className="me" to="/about#davi">
 					Davi Alcântara
 				</Link>
 			</div>

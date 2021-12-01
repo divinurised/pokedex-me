@@ -6,9 +6,9 @@ import Loader from '../../components/Loader';
 import PokemonType from '../../components/PokemonType';
 import Map from '../../components/Map';
 
+import './styles.scss';
 import { ScaleLoader } from 'react-spinners';
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
-import './styles.scss';
 import { Link } from 'react-router-dom';
 
 const PokemonPage = () => {

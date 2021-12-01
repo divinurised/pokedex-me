@@ -9,8 +9,8 @@
 	margin-top: 1.5rem;
 	// width: 100%;
 
-	a:nth-child(odd) {
-		margin: 0 1.5rem;
+	a {
+		margin: 0 0.75rem;
 	}
 
 	.pokemonLoader {
@@ -30,6 +30,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	.pagination {
 		margin: 0;
 		display: inline-flex;
@@ -40,6 +41,7 @@
 		min-height: 2.85714286em;
 		background-color: $cardColor;
 		width: fit-content;
+
 		.item {
 			font-weight: 600;
 			min-width: 3em;
@@ -58,11 +60,11 @@
 			text-transform: none;
 			color: rgba(0, 0, 0, 0.87);
 			font-weight: 400;
-			transition-property: background, box-shadow, color;
-			transition-duration: 0.1s, 0.1s, 0.1s;
-			transition-timing-function: ease, ease, ease;
-			transition-delay: 0s, 0s, 0s;
-			transition: 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
+			// transition-property: background, box-shadow, color;
+			// transition-duration: 0.1s, 0.1s, 0.1s;
+			// transition-timing-function: ease, ease, ease;
+			// transition-delay: 0s, 0s, 0s;
+			// transition: 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
 			cursor: pointer;
 			&:hover {
 				background-color: darken($cardColor, 20%);

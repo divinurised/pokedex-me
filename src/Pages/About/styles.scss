@@ -1,0 +1,67 @@
+.article {
+	width: 100%;
+	padding: 0 15px;
+	.article-title-container {
+		text-align: center;
+		font-size: 1.5rem;
+		margin: 2rem 0;
+	}
+	.article-content-container {
+		a {
+			color: black;
+		}
+		> h1 {
+			text-align: center;
+			margin: 30px 0;
+		}
+		div {
+			margin-top: 20px;
+			display: flex;
+			align-items: center;
+			> svg,
+			img {
+				margin-right: 10px;
+				width: 50px;
+			}
+		}
+		ul {
+			li {
+				margin-left: 30px;
+			}
+		}
+		.media-container {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			.medias {
+				display: flex;
+				justify-content: space-between;
+
+				a {
+					text-decoration: none;
+					color: black;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transition: 0.2s ease-in-out;
+					&:not(:first-child) {
+						margin-left: 30px;
+					}
+					svg {
+						margin-right: 5px;
+						visibility: hidden;
+						opacity: 0;
+						width: fit-content;
+						transition: 0.2s;
+					}
+					&:hover {
+						svg {
+							opacity: 100%;
+							visibility: visible;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import ToggleMenu from '../ToggleMenu';
+
 import { GoMarkGithub, GoSearch } from 'react-icons/go';
 import { MdCatchingPokemon } from 'react-icons/md';
 import './styles.scss';
@@ -49,7 +51,7 @@ function Navbar({ pokemon, pokemonsName }) {
 								<a
 									key={pokemon.name}
 									className="name-link"
-									href={`/pokemon/${pokemon.name}`}
+									href={`/pokemon/${pokemon.url.slice(34)}`}
 								>
 									<p>{pokemon.name}</p>
 								</a>
@@ -65,6 +67,7 @@ function Navbar({ pokemon, pokemonsName }) {
 					<GoMarkGithub className="githubIcon" /> Source
 				</Link>
 			</div>
+			<ToggleMenu />
 		</section>
 	);
 }

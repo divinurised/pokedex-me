@@ -10,6 +10,9 @@ $cardColor: #f5f0e8;
 
 body {
 	min-height: 100vh;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 #root {
@@ -31,7 +34,7 @@ body {
 	}
 }
 
-@media (max-width: 850px) {
+@media (max-width: 833px) {
 	.container {
 		width: 100vw;
 	}
@@ -39,18 +42,69 @@ body {
 	main,
 	.pokemonContainer {
 		width: 100% !important;
-		padding: 5px 20px;
+		padding: 0 15px;
 	}
-	.card {
-		width: 12rem;
-		h2 {
-			font-size: 1.3rem;
-		}
-		p {
-			font-size: 0.9rem;
+	.cardContainer {
+		.card {
+			width: 13rem;
+			h2 {
+				font-size: 1.3rem;
+			}
+			p {
+				font-size: 0.9rem;
+			}
 		}
 	}
 }
 
-@media (max-width: 712px) {
+@media (max-width: 740px) {
+	.card {
+		width: 15rem !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.card {
+		width: 13rem !important;
+	}
+	.paginationContainer {
+		a:not([type='prevItem'], [type='nextItem']) {
+			display: none;
+		}
+	}
+	.infoContainer,
+	.leaflet-container {
+		width: 100% !important;
+	}
+}
+
+@media (max-width: 520px) {
+	.navigation {
+		display: none !important;
+	}
+	.toggle-container {
+		display: flex;
+	}
+	.card {
+		width: 20rem !important;
+		img {
+			width: 10rem;
+		}
+		h2 {
+			font-size: 2rem !important;
+		}
+	}
+	.titleContent {
+		font-size: 90% !important;
+	}
+}
+@media (max-width: 435px) {
+	.titleContent {
+		font-size: 0.7rem !important;
+	}
+	.next-previous-container {
+		img {
+			margin: 30px 60px !important;
+		}
+	}
 }
