@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import ToggleMenu from '../ToggleMenu';
+import ToggleMenu from '../ToggleMenu/index';
 
 import { GoMarkGithub, GoSearch } from 'react-icons/go';
 import { MdCatchingPokemon } from 'react-icons/md';

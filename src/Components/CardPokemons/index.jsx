@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import PokemonType from '../PokemonType';
+import PokemonType from '../PokemonType/index';
 
 import './styles.scss';
 
