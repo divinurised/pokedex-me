@@ -57,7 +57,7 @@ function Navbar({ pokemon, pokemonsName }) {
 								<a
 									key={pokemon.name}
 									className="name-link"
-									to={`/pokemon/${pokemon.url.slice(34)}`}
+									href={`/pokemon/${pokemon.url.slice(34)}`}
 								>
 									<p>{pokemon.name}</p>
 								</a>
