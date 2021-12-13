@@ -1,11 +1,11 @@
-@import '../../styles/globalStyles.scss';
+@import '../../styles/colors.scss';
 
 .navbar {
 	width: 100%;
 	display: flex;
 	display: flex;
 	justify-content: space-between;
-	width: 51rem;
+	width: 48.5rem;
 	margin-top: 20px;
 
 	.logoContainer {
@@ -74,12 +74,6 @@
 				}
 			}
 		}
-
-		// p {
-		//   background-color: $cardColor;
-		//   padding: 5px 10px;
-		//   border-radius: 5px;
-		// }
 		.searchContainer {
 			background: $cardColor;
 			display: flex;

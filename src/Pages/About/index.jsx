@@ -63,12 +63,10 @@ function About() {
 				</ul>
 				<br />
 				<p>Now, let's get into the Techs.</p>
-				<div>
-					<MdCatchingPokemon size={50} />
-					<h2>Techs, Libs and more...</h2>
-				</div>
 				<br />
-				<h2>Main</h2>
+				<h2>Techs, Libs and more...</h2>
+				{/* <br /> */}
+				<h3>Main</h3>
 				<ul>
 					<li>
 						<a href="https://pt-br.reactjs.org" target="_blank">
@@ -105,7 +103,7 @@ function About() {
 					</li>
 				</ul>
 				<br />
-				<h2>Libs</h2>
+				<h3>Libs</h3>
 				<ul>
 					<li>
 						<a href="https://react-leaflet.js.org" target="_blank">
@@ -136,7 +134,7 @@ function About() {
 					</li>
 				</ul>
 				<br />
-				<h2>More...</h2>
+				<h3>More...</h3>
 				<ul>
 					<li>
 						<a
@@ -154,25 +152,25 @@ function About() {
 					<div className="medias">
 						<a href="mailto:dxvialcantara@gmail.com">
 							<RiMailOpenLine />
-							Mail
+							<p>Mail</p>
 						</a>
 						<a href="https://github.com/divinurised" target="_blank">
 							<RiGithubLine />
-							Github
+							<p>Github</p>
 						</a>
 						<a
 							href="https://www.linkedin.com/in/davi-alcântara-35b5931a0/"
 							target="_blank"
 						>
 							<RiLinkedinLine />
-							Linkedin
+							<p>Linkedin</p>
 						</a>
 						<a
 							href="https://www.instagram.com/davialcantara__/"
 							target="_blank"
 						>
 							<RiInstagramLine />
-							Instagram
+							<p>Instagram</p>
 						</a>
 					</div>
 				</div>

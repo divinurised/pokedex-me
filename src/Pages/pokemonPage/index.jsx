@@ -115,5 +115,3 @@ const PokemonPage = () => {
 };
 
 export default PokemonPage;
-
-// getQuery={(q) => setQuery(q)}

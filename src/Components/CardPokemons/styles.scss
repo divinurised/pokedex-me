@@ -1,4 +1,4 @@
-@import '../../styles/globalStyles.scss';
+@import '../../styles/colors.scss';
 
 .card {
 	display: flex;
@@ -9,9 +9,9 @@
 	width: 15rem;
 	height: 20rem;
 
-	background-color: $cardColor;
 	margin-top: 1.5rem;
 	border-radius: 10px;
+	background-color: $cardColor;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 	.textContainer {

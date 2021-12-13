@@ -1,11 +1,11 @@
 import React from 'react';
-import './styles.scss';
 import { Link } from 'react-router-dom';
+
 import PokemonType from '../PokemonType';
 
-export const CardPokemons = function ({ pokemon }) {
-	// console.log(pokemon);
+import './styles.scss';
 
+export const CardPokemons = function ({ pokemon }) {
 	return (
 		<Link
 			style={{ textDecoration: 'none', color: '#000' }}

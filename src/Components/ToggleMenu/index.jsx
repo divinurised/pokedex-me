@@ -15,9 +15,7 @@ function ToggleMenu() {
 		}
 	}
 	function desativate() {
-		setTimeout(() => {
-			document.getElementById('toggler').style.display = 'none';
-		}, 1);
+		document.getElementById('toggler').style.display = 'none';
 	}
 	return (
 		<div className="toggle-container">

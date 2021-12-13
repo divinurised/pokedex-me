@@ -24,11 +24,16 @@ function Navbar({ pokemon, pokemonsName }) {
 		searchWord == '' ? setFilteredPokemons([]) : setFilteredPokemons(newFilter);
 	};
 
+	function desativate() {
+		document.getElementById('toggler').style.display = 'none';
+	}
+
 	return (
 		<section className="navbar">
 			<div className="title">
 				<Link
 					className="logoContainer"
+					onClick={desativate}
 					to="/"
 					style={{ textDecoration: 'none', color: 'black' }}
 				>

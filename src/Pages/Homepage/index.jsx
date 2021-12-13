@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Pagination } from 'semantic-ui-react';
 
+import { CardPokemons } from '../../components/CardPokemons/index';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Loader from '../../components/Loader';
-import { Pagination } from 'semantic-ui-react';
-import { CardPokemons } from '../../components/CardPokemons/index';
 
 import './styles.scss';
 
@@ -22,37 +22,10 @@ const Homepage = function () {
 	const [pageCount, setPageCount] = useState();
 	const [loadingPokemons, setLoadingPokemons] = useState(true);
 
-	// const getAllPokemonsName = async () => {
-	// 	await axios
-	// 		.get('https://pokeapi.com/api/v2/pokemon?limit=882')
-	// 		.then((response) => {
-	// 			console.log(response.data.results);
-	// 		});
-	// };
-
-	// useEffect(() => {
-	// 	getAllPokemonsName();
-	// }, [pokemon, currentPage, loading]);
-
-	// Get Total Pokemons
-
-	// const getTotalPokemons = async () => {
-	// 	await axios.get('https://pokeapi.co/api/v2/pokemon').then((response) => {
-	// 		setTotalPokemons(response.data.count);
-	// 		console.log(totalPokemons);
-	// 		getAllPokemonsName();
-	// 	});
-	// };
-	// useEffect(() => {
-	// 	getTotalPokemons();
-	// }, [totalPokemons]);
-
 	const getCurrentPage = (e, pageInfo) => {
 		setPageCount(pageInfo.activePage);
 		setCurrentPage(pageInfo.activePage * 21 - 21);
 	};
-
-	// List Pokemons
 
 	const getPokemonList = async () => {
 		setLoadingPokemons(true);

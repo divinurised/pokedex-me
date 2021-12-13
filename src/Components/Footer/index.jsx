@@ -8,9 +8,6 @@ import Hope from '../../assets/images/hope.png';
 function Footer() {
 	return (
 		<section className="footer">
-			{/* <Link to="/about#headline" className="aboutContainer">
-				<p>Learn more about this project here.</p>
-			</Link> */}
 			<div className="signature">
 				<p>Made with</p>
 				<img src={Hope} alt="Hope!" title="Hope!" />
