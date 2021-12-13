@@ -26,10 +26,14 @@ function ToggleMenu() {
 				<Link onClick={desativate} to="/about">
 					About
 				</Link>
-				<Link onClick={desativate} to="#">
+				<a
+					onClick={desativate}
+					href="https://github.com/divinurised/pokedex-me"
+					target="_blank"
+				>
 					<p>Source</p>
 					<GoMarkGithub />
-				</Link>
+				</a>
 			</div>
 		</div>
 	);

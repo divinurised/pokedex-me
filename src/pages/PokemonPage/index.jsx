@@ -70,7 +70,12 @@ const PokemonPage = () => {
 							onClick={playPokemonCry}
 						>
 							<ScaleLoader />
-							<video id="cry" style={{ display: 'none' }} name="media">
+							<video
+								id="cry"
+								style={{ display: 'none' }}
+								name="media"
+								playsinline
+							>
 								<source
 									// src={`https://play.pokemonshowdown.com/audio/cries/${pokemonDetails.name}.ogg`}
 									src={`https://play.pokemonshowdown.com/audio/cries/${pokemonDetails.name}.mp3`}
