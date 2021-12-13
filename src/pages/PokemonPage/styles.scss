@@ -1,0 +1,101 @@
+@import '../../styles/colors.scss';
+@import '../../styles/types.scss';
+
+.pokemonContainer {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	.next-previous-container {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+
+		svg {
+			fill: black;
+		}
+
+		img {
+			margin: 30px 100px;
+			width: 150px;
+		}
+	}
+
+	.pokemonCry {
+		cursor: pointer;
+		margin: 0 0 30px;
+	}
+
+	> h1 {
+		margin: 55px 0px 20px 0px;
+	}
+
+	.infoContainer {
+		width: 60%;
+		height: inherit;
+		border-radius: 5px;
+		background-color: $cardColor;
+		margin-bottom: 40px;
+		box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+			rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+		.titleContainer {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			text-transform: uppercase;
+			font-weight: 600;
+
+			.statContainer {
+				display: flex;
+				justify-content: space-between;
+				width: 50%;
+			}
+
+			.titleContent {
+				margin: 10px;
+			}
+
+			.statBarContainer {
+				width: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.statBar {
+					width: 90%;
+					max-width: 260px;
+					height: 6px;
+					background: rgba($color: #000000, $alpha: 0.06);
+					border-radius: 3px;
+					overflow: hidden;
+
+					span {
+						transform: scaleX(0.001);
+						transform-origin: left;
+						animation: scaleBar 1.5s ease-in-out 1 forwards;
+					}
+
+					@keyframes scaleBar {
+						0% {
+							transform: scaleX(0.001);
+						}
+						100% {
+							transform: scaleX(1);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.leaflet-container {
+		width: 60%;
+		height: 300px;
+		border-radius: 5px;
+		box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+			rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+		margin: 40px 0;
+	}
+}

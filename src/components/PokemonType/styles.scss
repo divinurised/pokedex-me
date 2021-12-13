@@ -1,0 +1,16 @@
+.typeContainer {
+	width: fit-content;
+	text-align: center;
+	display: flex;
+	margin: 0 auto;
+
+	:first-child {
+		margin-right: 10px;
+	}
+
+	p {
+		color: #fff;
+		padding: 5px 10px;
+		border-radius: 5px;
+	}
+}

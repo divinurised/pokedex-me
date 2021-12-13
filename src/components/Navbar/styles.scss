@@ -1,0 +1,101 @@
+@import '../../styles/colors.scss';
+
+.navbar {
+	width: 100%;
+	display: flex;
+	display: flex;
+	justify-content: space-between;
+	width: 48.5rem;
+	margin-top: 20px;
+
+	.logoContainer {
+		display: flex;
+		align-items: center;
+
+		:first-child {
+			margin-right: 5px;
+		}
+	}
+
+	.navigation {
+		display: flex;
+
+		a {
+			text-decoration: none;
+			color: black;
+			height: fit-content;
+			display: flex;
+			align-items: center;
+
+			&:hover {
+				box-shadow: 0px 2px black;
+			}
+		}
+
+		:first-child {
+			margin-right: 20px;
+		}
+
+		.githubIcon {
+			margin-right: 5px;
+		}
+	}
+
+	.title {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		.search-results {
+			width: 100%;
+			border-radius: 5px;
+			margin-top: 5px;
+			background-color: $cardColor;
+			max-height: 10rem;
+			overflow: hidden;
+			overflow-y: auto;
+			position: absolute;
+			top: 100%;
+			z-index: 1;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			.name-link {
+				text-decoration: none;
+				color: black;
+				padding: 0.5rem 1rem;
+				display: block;
+				transition: 0.2s;
+
+				&:hover {
+					background-color: darken($cardColor, 5%);
+				}
+			}
+		}
+		.searchContainer {
+			background: $cardColor;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 10px 10px;
+			margin-top: 10px;
+			border-radius: 5px;
+
+			:nth-child(2) {
+				width: 100%;
+			}
+
+			input {
+				display: flex;
+				width: 100%;
+				align-items: center;
+				border-style: none;
+				outline: none;
+				background-color: transparent;
+				margin-left: 15px;
+			}
+		}
+	}
+}
