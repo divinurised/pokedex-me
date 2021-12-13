@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import Homepage from './pages/Homepage/index';
-import PokemonPage from './pages/PokemonPage/index';
-import About from './pages/About/index';
+import Homepage from './pages/Homepage/index.jsx';
+import PokemonPage from './pages/PokemonPage/index.jsx';
+import About from './pages/About/index.jsx';
 
-import Navbar from './components/Navbar/index';
-import Footer from './components/Footer/index';
+import Navbar from './components/Navbar/index.jsx';
+import Footer from './components/Footer/index.jsx';
 
 import pokemonsName from './pokemonsName.json';
 
