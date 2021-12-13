@@ -69,9 +69,9 @@ function Navbar({ pokemon, pokemonsName }) {
 
 			<div className="navigation">
 				<Link to="/about">About</Link>
-				<Link to="#">
+				<a href="https://github.com/divinurised/pokedex-me">
 					<GoMarkGithub className="githubIcon" /> Source
-				</Link>
+				</a>
 			</div>
 			<ToggleMenu />
 		</section>

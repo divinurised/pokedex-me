@@ -70,7 +70,7 @@ const PokemonPage = () => {
 							onClick={playPokemonCry}
 						>
 							<ScaleLoader />
-							<video
+							<audio
 								id="cry"
 								style={{ display: 'none' }}
 								name="media"
@@ -82,7 +82,7 @@ const PokemonPage = () => {
 									// type="audio/ogg"
 									type="audio/mp3"
 								/>
-							</video>
+							</audio>
 						</div>
 
 						<div className="infoContainer">
