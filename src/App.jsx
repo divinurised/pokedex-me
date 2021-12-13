@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 
 import pokemonsName from './pokemonsName.json';
 
-import './Styles/globalStyles.scss';
+import './styles/globalStyles.scss';
 
 function App() {
 	return (

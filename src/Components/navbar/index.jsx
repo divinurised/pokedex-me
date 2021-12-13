@@ -12,6 +12,7 @@ function Navbar({ pokemon, pokemonsName }) {
 	const [nextURL, setNextURL] = [''];
 
 	const [filteredPokemons, setFilteredPokemons] = useState([]);
+	const [currentURL, setCurrentURL] = useState();
 
 	const handleFilter = (event) => {
 		const searchWord = event.target.value;
@@ -53,13 +54,13 @@ function Navbar({ pokemon, pokemonsName }) {
 					<div className="search-results">
 						{filteredPokemons.map((pokemon) => {
 							return (
-								<Link
+								<a
 									key={pokemon.name}
 									className="name-link"
 									to={`/pokemon/${pokemon.url.slice(34)}`}
 								>
 									<p>{pokemon.name}</p>
-								</Link>
+								</a>
 							);
 						})}
 					</div>

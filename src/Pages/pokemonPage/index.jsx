@@ -38,7 +38,6 @@ const PokemonPage = () => {
 
 	const playPokemonCry = () => {
 		document.getElementById('cry').play();
-		console.log('TA INDOOO');
 	};
 
 	return (
