@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import axios from 'axios';
 
-import Loader from '../../components/Loader/index';
-import PokemonType from '../../components/PokemonType/index';
-import Map from '../../components/Map/index';
+import Loader from '../../components/Loader';
+import PokemonType from '../../components/PokemonType';
+import Map from '../../components/Map';
 
 import './styles.scss';
 import { ScaleLoader } from 'react-spinners';

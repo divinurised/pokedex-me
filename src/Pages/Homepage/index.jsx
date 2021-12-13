@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Pagination } from 'semantic-ui-react';
 
-import { CardPokemons } from '../../components/CardPokemons/index';
-import Navbar from '../../components/Navbar/index';
-import Footer from '../../components/Footer/index';
-import Loader from '../../components/Loader/index';
+import { CardPokemons } from '../../components/CardPokemons';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import Loader from '../../components/Loader';
 
 import './styles.scss';
 
