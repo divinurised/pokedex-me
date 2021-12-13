@@ -53,13 +53,13 @@ function Navbar({ pokemon, pokemonsName }) {
 					<div className="search-results">
 						{filteredPokemons.map((pokemon) => {
 							return (
-								<a
+								<Link
 									key={pokemon.name}
 									className="name-link"
-									href={`/pokemon/${pokemon.url.slice(34)}`}
+									to={`/pokemon/${pokemon.url.slice(34)}`}
 								>
 									<p>{pokemon.name}</p>
-								</a>
+								</Link>
 							);
 						})}
 					</div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import { MdCatchingPokemon } from 'react-icons/md';
+// import { MdCatchingPokemon } from 'react-icons/md';
+// import Me from '../../assets/images/me.svg';
 import {
 	RiInstagramLine,
 	RiLinkedinLine,
@@ -8,13 +9,11 @@ import {
 	RiBracesLine,
 	RiMailOpenLine,
 } from 'react-icons/ri';
-import Me from '../../assets/images/me.svg';
 
 import './styles.scss';
 
 function About() {
-	const [query, setQuery] = useState('');
-
+	// const [query, setQuery] = useState('');
 	return (
 		<div className="article">
 			<div className="article-title-container">
