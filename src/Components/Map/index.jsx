@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import Loader from '../../components/Loader';
+import Loader from '../../Components/Loader';
 
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';

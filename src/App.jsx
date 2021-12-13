@@ -1,16 +1,16 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import Homepage from './pages/Homepage';
-import PokemonPage from './pages/PokemonPage';
-import About from './pages/About';
+import Homepage from './Pages/Homepage';
+import PokemonPage from './Pages/PokemonPage';
+import About from './Pages/About';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 import pokemonsName from './pokemonsName.json';
 
-import './styles/globalStyles.scss';
+import './Styles/globalStyles.scss';
 
 function App() {
 	return (
