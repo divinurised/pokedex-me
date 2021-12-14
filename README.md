@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">A react app based in the public <a href="https://pokeapi.co/">PokeAPI</a>.</p>
+<p align="center">You can see the application running here: <a href="https://pokedex-me.vercel.app/">Pokemon.me</a>.</p>
 
 <p align="center">
  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=49AA26&labelColor=000000" alt="PRs welcome!" />
