@@ -33,7 +33,7 @@ This project was developed with the following technologies and libraries:
 
 ## Project 💻
 
-Pokedex.me is a application list pokemons and show their stats, sounds and more. You can also simulate a Pokemon appearance in a interactive map.
+Pokedex.me is a application that list pokemons and show their stats, sounds and more. You can also simulate a Pokemon appearance in a interactive map.
 
 ## License
 
@@ -41,4 +41,4 @@ Pokedex.me is a application list pokemons and show their stats, sounds and more.
 
 ---
 
-Feito com ⭐ by Davi Alcântara.
+Made with ⭐ by Davi Alcântara.
