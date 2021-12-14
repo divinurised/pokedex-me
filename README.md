@@ -31,13 +31,9 @@ This project was developed with the following technologies and libraries:
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [React Spinners](https://www.davidhu.io/react-spinners/)
 
----
-
 ## Project 💻
 
 Pokedex.me is a application list pokemons and show their stats, sounds and more. You can also simulate a Pokemon appearance in a interactive map.
-
----
 
 ## License
 
