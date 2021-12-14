@@ -13,7 +13,7 @@
 
 <br/>
 
-![Preview](./.github/screen.png)
+![Preview](.github/screen.png)
 
 <br/>
 
