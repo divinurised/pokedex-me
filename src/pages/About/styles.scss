@@ -30,7 +30,7 @@
 			.medias {
 				display: flex;
 				justify-content: space-between;
-				max-width: 60%;
+				// max-width: 60%;
 				a {
 					text-decoration: none;
 					color: black;
@@ -56,6 +56,19 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+@media (max-width: 520px) {
+	.medias {
+		width: 100%;
+		p {
+			display: none;
+		}
+		svg {
+			visibility: visible !important;
+			opacity: 1 !important;
 		}
 	}
 }

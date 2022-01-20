@@ -79,20 +79,20 @@ body {
 }
 
 @media (max-width: 520px) {
-	.medias {
-		a:not(:first-child) {
-			margin-left: 2rem !important;
-		}
-		svg {
-			visibility: visible !important;
-			opacity: 100 !important;
-			height: 2rem !important;
-			margin-right: 0px !important;
-		}
-		p {
-			display: none;
-		}
-	}
+	// .medias {
+	// 	a:not(:first-child) {
+	// 		margin-left: 2rem !important;
+	// 	}
+	// 	svg {
+	// 		visibility: visible !important;
+	// 		opacity: 100 !important;
+	// 		height: 2rem !important;
+	// 		margin-right: 0px !important;
+	// 	}
+	// 	p {
+	// 		display: none;
+	// 	}
+	// }
 	.navigation {
 		display: none !important;
 	}
