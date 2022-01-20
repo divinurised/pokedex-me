@@ -61,14 +61,19 @@
 }
 
 @media (max-width: 520px) {
-	.medias {
+	.medias-container {
 		width: 100%;
-		p {
-			display: none;
-		}
-		svg {
-			visibility: visible !important;
-			opacity: 1 !important;
+		.medias {
+			width: 60%;
+			p {
+				display: none;
+			}
+			svg {
+				visibility: visible !important;
+				opacity: 1 !important;
+				height: 2rem !important;
+				margin-right: 0px !important;
+			}
 		}
 	}
 }
